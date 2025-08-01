@@ -1,0 +1,117 @@
+/*Root Styles*/
+html {
+  font-family: "Hanken Grotesk";
+}
+
+.montserrat-light {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.montserrat-light-italic {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.montserrat-extrabold {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.hanken-light {
+  font-family: "Hanken Grotesk", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.raleway-light {
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.raleway-medium {
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.raleway-bold {
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.dm-serif-display {
+  font-family: "DM Serif Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: italic;
+}
+
+
+/* Base dropdown styling */
+.dropdown-content {
+  transform-origin: top;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Arrow rotation animation (already in your code but enhanced) */
+.dropdown-arrow {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Optional: Add subtle scale animation to dropdown buttons */
+.dropdown-button {
+  transition: all 0.2s ease-out;
+}
+
+.dropdown-button:hover {
+  transform: translateX(2px);
+}
+
+/* Optional: Stagger animation for dropdown items */
+.dropdown-item {
+  opacity: 0;
+  transform: translateY(-10px);
+  animation: dropdownItemFadeIn 0.3s ease-out forwards;
+}
+
+.dropdown-item:nth-child(1) { animation-delay: 0.05s; }
+.dropdown-item:nth-child(2) { animation-delay: 0.1s; }
+.dropdown-item:nth-child(3) { animation-delay: 0.15s; }
+.dropdown-item:nth-child(4) { animation-delay: 0.2s; }
+.dropdown-item:nth-child(5) { animation-delay: 0.25s; }
+
+@keyframes dropdownItemFadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+#sidebar-menu button:hover,
+#sidebar-menu a:hover {
+  cursor: pointer;
+}
+
+#sidebar-menu-annual-report ul ul {
+  margin-left: 1rem;
+}
+#sidebar-menu-annual-report ul ul ul {
+  padding-left: 0.5rem;
+}
+
+

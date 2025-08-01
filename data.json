@@ -1,0 +1,174 @@
+[
+  {
+    "type": "dropdown",
+    "label": "2000s",
+    "icon": "<svg class=\"w-5 h-5\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" viewBox=\"0 0 24 24\"><path d=\"M3 6.47214C3 6.16165 3.07229 5.85542 3.21115 5.57771L4 4H9L10 6H20C20.5523 6 21 6.44772 21 7V9V19C21 19.5523 20.5523 20 20 20H4C3.44772 20 3 19.5523 3 19V9V6.47214Z\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M4 20H20C20.5523 20 21 19.5523 21 19V11C21 9.89543 20.1046 9 19 9H5C3.89543 9 3 9.89543 3 11V19C3 19.5523 3.44772 20 4 20Z\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>",
+    "children": [
+     {
+       "type": "file",
+       "label": "2023",
+       "fileType": "pdf",
+       "url": "annual/sei-pdf-annual_report-2023.pdf"
+     },
+     {
+        "type": "file",
+        "label": "2022",
+        "fileType": "pdf",
+        "url": "annual/sei-pdf-annual_report-2022.pdf"
+     },
+     {
+        "type": "file",
+        "label": "2021",
+        "fileType": "pdf",
+        "url": "annual/sei-pdf-annual_report-2021.pdf"
+     },
+    {
+        "type": "file",
+        "label": "2020",
+        "fileType": "pdf",
+        "url": "annual/sei-pdf-annual_report-2020.pdf"
+    },
+    {
+       "type": "file",
+       "label": "2019",
+       "fileType": "pdf",
+       "url": "annual/sei-pdf-annual_report-2019.pdf"
+     },
+     {
+        "type": "file",
+        "label": "2018",
+        "fileType": "pdf",
+        "url": "annual/sei-pdf-annual_report-2018.pdf"
+     },
+     {
+        "type": "file",
+        "label": "2017",
+        "fileType": "pdf",
+        "url": "annual/sei-pdf-annual_report-2017.pdf"
+     },
+    {
+        "type": "file",
+        "label": "2016",
+        "fileType": "pdf",
+        "url": "annual/sei-pdf-annual_report-2016.pdf"
+    },
+    {
+       "type": "file",
+       "label": "2015",
+       "fileType": "pdf",
+       "url": "annual/sei-pdf-annual_report-2015.pdf"
+     },
+     {
+        "type": "file",
+        "label": "2014",
+        "fileType": "pdf",
+        "url": "annual/sei-pdf-annual_report-2014.pdf"
+     },
+     {
+        "type": "file",
+        "label": "2013",
+        "fileType": "pdf",
+        "url": "annual/sei-pdf-annual_report-2013.pdf"
+     },
+    {
+        "type": "file",
+        "label": "2012",
+        "fileType": "pdf",
+        "url": "annual/sei-pdf-annual_report-2012.pdf"
+    },
+    {
+       "type": "file",
+       "label": "2011",
+       "fileType": "pdf",
+       "url": "annual/sei-pdf-annual_report-2011.pdf"
+     },
+     {
+        "type": "file",
+        "label": "2010",
+        "fileType": "pdf",
+        "url": "annual/sei-pdf-annual_report-2010.pdf"
+     },
+     {
+        "type": "file",
+        "label": "2009",
+        "fileType": "pdf",
+        "url": "annual/sei-pdf-annual_report-2009.pdf"
+     },
+    {
+        "type": "file",
+        "label": "2008",
+        "fileType": "pdf",
+        "url": "annual/sei-pdf-annual_report-2008.pdf"
+    }
+   ]
+  },
+ {
+    "type": "dropdown",
+    "label": "1900s",
+    "icon": "<svg class=\"w-5 h-5\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" viewBox=\"0 0 24 24\"><path d=\"M3 6.47214C3 6.16165 3.07229 5.85542 3.21115 5.57771L4 4H9L10 6H20C20.5523 6 21 6.44772 21 7V9V19C21 19.5523 20.5523 20 20 20H4C3.44772 20 3 19.5523 3 19V9V6.47214Z\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M4 20H20C20.5523 20 21 19.5523 21 19V11C21 9.89543 20.1046 9 19 9H5C3.89543 9 3 9.89543 3 11V19C3 19.5523 3.44772 20 4 20Z\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>",
+    "children": [
+     {
+       "type": "file",
+       "label": "1999",
+       "fileType": "pdf",
+       "url": "no-URL"
+     },
+     {
+        "type": "file",
+        "label": "1998",
+        "fileType": "pdf",
+        "url": "no-URL"
+     },
+     {
+        "type": "file",
+        "label": "1996",
+        "fileType": "pdf",
+        "url": "annual/sei-pdf-annual_report-1996.pdf"
+     },
+    {
+        "type": "file",
+        "label": "1995",
+        "fileType": "pdf",
+        "url": "annual/sei-pdf-annual_report-1995.pdf"
+    },
+    {
+       "type": "file",
+       "label": "1994",
+       "fileType": "pdf",
+       "url": "annual/sei-pdf-annual_report-1994.pdf"
+     },
+     {
+        "type": "file",
+        "label": "1993",
+        "fileType": "pdf",
+        "url": "annual/sei-pdf-annual_report-1993.pdf"
+     },
+     {
+        "type": "file",
+        "label": "1992",
+        "fileType": "pdf",
+        "url": "annual/sei-pdf-annual_report-1992.pdf"
+     },
+    {
+        "type": "file",
+        "label": "1991",
+        "fileType": "pdf",
+        "url": "annual/sei-pdf-annual_report-1991.pdf"
+    },
+    {
+       "type": "file",
+       "label": "1990",
+       "fileType": "pdf",
+       "url": "annual/sei-pdf-annual_report-1990.pdf"
+     },
+     {
+        "type": "file",
+        "label": "1989",
+        "fileType": "pdf",
+        "url": "annual/sei-pdf-annual_report-1989.pdf"
+     }
+   ]
+  }
+  
+
+]
