@@ -1,415 +1,550 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/webp" href="http://seibucket.science-scholarships.ph/dost-sei-logo.svg" />
-    <title>DOST-SEI Annual Report</title>
-    <script src="http://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js" ></script>
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="preconnect" href="http://fonts.googleapis.com" />
-    <link rel="preconnect" href="http://fonts.gstatic.com" crossorigin />
-    <link href="http://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"/>
-    
-  </head>
-  <body class="bg-[#030A17]">
-      <!-- Header Section -->
-    <header id="header">
-        <nav id="navbar" class="w-full gap-4 fixed top-0 z-50 pointer-events-auto backdrop-blur-lg bg-[#030A17]/30 rounded-b-lg transition-all duration-300 ease-in-out text-white">
-          <div class="w-5/6 md:w-3/4 mx-auto">
-            <!-- Large:GOVPH Navigation Bar -->
-            <div class="hidden lg:flex flex-row items-center justify-center lg:justify-between py-3">
-              <div class="h-full flex flex-row items-center gap-8">
-                <!-- GOV PH Logo -->
-                <a href="https://www.gov.ph/" class="cursor-pointer flex flex-row gap-3 shrink-0 items-center text-base xl:text-xl" target="_blank">
-                  GOVPH
-                </a>
-                <!-- Home Button -->
-                <a href="/" class="nav-link text-xs xl:text-sm text-white/80 hover:text-[#A6E5FF] relative transition-all duration-300 h-full flex items-center montserrat-light">
-                  Home
-                </a>
-                <!-- About Button -->
-                <div class="relative group text-xs xl:text-sm text-white/80 hover:text-[#A6E5FF] transition-all duration-300 h-full flex items-center montserrat-light cursor-pointer">
-                  About DOST-SEI
-                  <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-auto group-hover:rotate-180 transition-all duration-300" viewBox="0 0 24 24"><path fill="currentColor" d="M12 14.379q-.161 0-.298-.053t-.267-.184L7.046 9.754q-.14-.14-.15-.344t.15-.364t.354-.16t.354.16L12 13.292l4.246-4.246q.14-.14.345-.15q.203-.01.363.15t.16.354t-.16.354l-4.389 4.388q-.13.131-.267.184q-.136.053-.298.053"/></svg>
-                  <div class="absolute left-1/2 top-full -translate-x-1/2 flex flex-col bg-[#030A17] w-[150%] border border-white/20 rounded-md text-[#f1f1f1] shadow-lg overflow-hidden opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-all duration-300">
-                    <a href="/about" class="block px-4 py-2 hover:bg-[#A6E5FF]/10 text-xs">DOST-SEI</a>
-                    <a href="https://apply.sei.dost.gov.ph/" target="_blank" class="block px-4 py-2 hover:bg-[#A6E5FF]/10 text-xs">Careers</a>
-                    <a href="/data-privacy-policy" class="block px-4 py-2 hover:bg-[#A6E5FF]/10 text-xs">Data Privacy Policy</a>
-                    <a href="/gad-space" class="block px-4 py-2 hover:bg-[#A6E5FF]/10 text-xs">GAD Space</a>
-                  </div>
-                </div>
-                <!-- Transparency Button -->
-                <div class="relative group text-xs xl:text-sm text-white/80 hover:text-[#A6E5FF] transition-all duration-300 h-full flex items-center montserrat-light cursor-pointer">
-                  Transparency
-                  <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-auto group-hover:rotate-180 transition-all duration-300" viewBox="0 0 24 24"><path fill="currentColor" d="M12 14.379q-.161 0-.298-.053t-.267-.184L7.046 9.754q-.14-.14-.15-.344t.15-.364t.354-.16t.354.16L12 13.292l4.246-4.246q.14-.14.345-.15q.203-.01.363.15t.16.354t-.16.354l-4.389 4.388q-.13.131-.267.184q-.136.053-.298.053"/></svg>
-                  <div class="absolute left-1/2 top-full -translate-x-1/2 flex flex-col bg-[#030A17] w-[200%] border border-white/20 rounded-md text-[#f1f1f1] shadow-lg overflow-hidden opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-all duration-300">
-                    <a href="/transparency-seal" class="block px-4 py-2 hover:bg-[#A6E5FF]/10 text-xs">Transparency Seal</a>
-                    <a href="/annual-report" class="block px-4 py-2 hover:bg-[#A6E5FF]/10 text-xs">Annual Report</a>
-                    <a href="/citizens-charter" class="block px-4 py-2 hover:bg-[#A6E5FF]/10 text-xs">Citizen's Charter</a>
-                    <a href="/procurement" class="block px-4 py-2 hover:bg-[#A6E5FF]/10 text-xs">Procurement</a>
-                    <a href="/good-governance-conditions" class="block px-4 py-2 hover:bg-[#A6E5FF]/10 text-xs">Good Governance Conditions</a>
-                  </div>
-                </div>
-                <!-- Programs & Projects Button -->
-                <div class="relative group text-xs xl:text-sm text-white/80 hover:text-[#A6E5FF] transition-all duration-300 h-full flex items-center montserrat-light cursor-pointer">
-                  Programs & Projects
-                  <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-auto group-hover:rotate-180 transition-all duration-300" viewBox="0 0 24 24"><path fill="currentColor" d="M12 14.379q-.161 0-.298-.053t-.267-.184L7.046 9.754q-.14-.14-.15-.344t.15-.364t.354-.16t.354.16L12 13.292l4.246-4.246q.14-.14.345-.15q.203-.01.363.15t.16.354t-.16.354l-4.389 4.388q-.13.131-.267.184q-.136.053-.298.053"/></svg>
-                  <div class="absolute left-1/2 top-full -translate-x-1/2 flex flex-col bg-[#030A17] w-[150%] border border-white/20 rounded-md text-[#f1f1f1] shadow-lg overflow-hidden opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-all duration-300">
-                    <a href="https://science-scholarships.ph/" target="_blank" class="block px-4 py-2 hover:bg-[#A6E5FF]/10 text-xs">Scholarship Programs</a>
-                    <a href="/capacity-building" class="block px-4 py-2 hover:bg-[#A6E5FF]/10 text-xs">Capacity-Building</a>
-                    <a href="/community-building" class="block px-4 py-2 hover:bg-[#A6E5FF]/10 text-xs">Community-Building</a>
-                    <a href="/recognition" class="block px-4 py-2 hover:bg-[#A6E5FF]/10 text-xs">Recognition</a>
-                    <a href="/learning-resources" class="block px-4 py-2 hover:bg-[#A6E5FF]/10 text-xs">Learning Resources</a>
-                  </div>
-                </div>
-                <!-- Resources Button -->
-                <div class="relative group text-xs xl:text-sm text-white/80 hover:text-[#A6E5FF] transition-all duration-300 h-full flex items-center montserrat-light cursor-pointer">
-                  Resources
-                  <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-auto group-hover:rotate-180 transition-all duration-300" viewBox="0 0 24 24"><path fill="currentColor" d="M12 14.379q-.161 0-.298-.053t-.267-.184L7.046 9.754q-.14-.14-.15-.344t.15-.364t.354-.16t.354.16L12 13.292l4.246-4.246q.14-.14.345-.15q.203-.01.363.15t.16.354t-.16.354l-4.389 4.388q-.13.131-.267.184q-.136.053-.298.053"/></svg>
-                  <div class="absolute left-1/2 top-full -translate-x-1/2 flex flex-col bg-[#030A17] w-[200%] border border-white/20 rounded-md text-[#f1f1f1] shadow-lg overflow-hidden opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-all duration-300">
-                    <a href="/sei-today" class="block px-4 py-2 hover:bg-[#A6E5FF]/10 text-xs">SEI Today</a>
-                    <a href="/downloads" class="block px-4 py-2 hover:bg-[#A6E5FF]/10 text-xs">Downloads</a>
-                    <a href="/publications" class="block px-4 py-2 hover:bg-[#A6E5FF]/10 text-xs">Publications</a>
-                  </div>
-                </div>
-                <!-- Contact Us Button -->
-                <div class="relative group text-xs xl:text-sm text-white/80 hover:text-[#A6E5FF] transition-all duration-300 h-full flex items-center montserrat-light cursor-pointer">
-                  Contact Us
-                  <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-auto group-hover:rotate-180 transition-all duration-300" viewBox="0 0 24 24"><path fill="currentColor" d="M12 14.379q-.161 0-.298-.053t-.267-.184L7.046 9.754q-.14-.14-.15-.344t.15-.364t.354-.16t.354.16L12 13.292l4.246-4.246q.14-.14.345-.15q.203-.01.363.15t.16.354t-.16.354l-4.389 4.388q-.13.131-.267.184q-.136.053-.298.053"/></svg>
-                  <div class="absolute left-1/2 top-full -translate-x-1/2 flex flex-col bg-[#030A17] w-[200%] border border-white/20 rounded-md text-[#f1f1f1] shadow-lg overflow-hidden opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-all duration-300">
-                          <a href="/regional-offices" class="block px-4 py-2 hover:bg-[#A6E5FF]/10 text-xs">Regional Offices</a>
-                          <a href="/attached-agencies" class="block px-4 py-2 hover:bg-[#A6E5FF]/10 text-xs">Attached Agencies</a>
-                          <a href="https://helpdesk.sei.dost.gov.ph/" target="_blank" class="block px-4 py-2 hover:bg-[#A6E5FF]/10 text-xs">Helpdesk</a>
-                  </div>
-                </div>
-              </div>
-              <!-- PST -->
-              <div class="text-xs text-white text-right montserrat-light">
-                Philippine Standard Time<br />
-                <span id="philippine-time">Loading time...</span>
-              </div>
-            </div>
 
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/webp" href="http://seibucket.science-scholarships.ph/dost-sei-logo.svg" />
+  <title>DOST-SEI Annual Report</title>
+  <script src="http://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="http://fonts.googleapis.com" />
+  <link rel="preconnect" href="http://fonts.gstatic.com" crossorigin />
+  <link
+    href="http://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet" />
 
-            <!-- Medium:GOVPH Navigation Bar -->
-            <div class="lg:hidden flex flex-col items-center justify-between border-b-1 border-[#f1f1f1]/50 py-3">
-              <div class="h-full w-full flex flex-row items-center justify-between gap-6">
-                <a href="https://www.gov.ph/" class="cursor-pointer flex flex-row gap-3 shrink-0 items-center text-base xl:text-xl" target="_blank">
-                  GOVPH
-                </a>
+</head>
 
-                <!-- PST -->
-                <div class="hidden sm:flex flex-col text-xs text-white text-center mt-2 montserrat-light">
-                  Philippine Standard Time<br />
-                  <span id="philippine-time2">Loading time...</span>
-                </div>
-
-                <!-- Visible when small -->
-                <div class="flex items-center justify-between gap-6">
-                  <button id="navbarToggle" class="text-white focus:outline-none hover:text-[#A6E5FF] transition-colors duration-300 cursor-pointer focus:text-[#A6E5FF]">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-auto" viewBox="0 0 21 21"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M4.5 6.5h12m-12.002 4h11.997M4.5 14.5h11.995"/></svg>
-                  </button>
-                </div>
-              </div>
-
-              <!-- Small: Navigation Bar -->
-              <div class="max-h-0 overflow-hidden flex flex-col w-full items-left justify-between gap-6 transition-all duration-300" id="mobileNavbar">
-                <a href="/" class="nav-link text-xs xl:text-sm text-white/80 hover:text-[#A6E5FF] relative transition-all duration-300 h-full flex items-center montserrat-light">
-                  Home
-                </a>
-                <div class="w-full">
-                  <button class="dropdown-btn focus:text-[#A6E5FF] flex gap-2 w-full items-center text-left text-xs xl:text-sm text-white/80 hover:text-[#A6E5FF] transition-colors duration-300 montserrat-light cursor-pointer">
-                    About DOST-SEI
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-auto group-hover:rotate-180 transition-all duration-300" viewBox="0 0 24 24"><!-- Icon from Material Symbols Light by Google - https://github.com/google/material-design-icons/blob/master/LICENSE --><path fill="currentColor" d="M12 14.379q-.161 0-.298-.053t-.267-.184L7.046 9.754q-.14-.14-.15-.344t.15-.364t.354-.16t.354.16L12 13.292l4.246-4.246q.14-.14.345-.15q.203-.01.363.15t.16.354t-.16.354l-4.389 4.388q-.13.131-.267.184q-.136.053-.298.053"/></svg>
-                  </button>
-
-                    <div class="overflow-hidden max-h-0 transition-[max-height] duration-500 ease-in-out flex flex-col w-full mt-1 text-[#f1f1f1] montserrat-light">
-                        <a href="https://sei.dost.gov.ph/about" class="block px-4 py-2 hover:bg-[#A6E5FF]/10 text-xs">DOST-SEI</a>
-                        <a href="https://apply.sei.dost.gov.ph" target="_blank" class="block px-4 py-2 hover:bg-[#A6E5FF]/10 text-xs">Careers</a>
-                        <a href="https://sei.dost.gov.ph/data-privacy-policy" class="block px-4 py-2 hover:bg-[#A6E5FF]/10 text-xs">Data Privacy Policy</a>
-                        <a href="https://sei.dost.gov.ph/gad-space" class="block px-4 py-2 hover:bg-[#A6E5FF]/10 text-xs">GAD Space</a>
-                    </div>
-                </div>
-                <div class="w-full">
-                  <button class="dropdown-btn focus:text-[#A6E5FF] flex gap-2 w-full items-center text-left text-xs xl:text-sm text-white/80 hover:text-[#A6E5FF] transition-colors duration-300 montserrat-light cursor-pointer">
-                    Transparency
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-auto group-hover:rotate-180 transition-all duration-300" viewBox="0 0 24 24"><!-- Icon from Material Symbols Light by Google - https://github.com/google/material-design-icons/blob/master/LICENSE --><path fill="currentColor" d="M12 14.379q-.161 0-.298-.053t-.267-.184L7.046 9.754q-.14-.14-.15-.344t.15-.364t.354-.16t.354.16L12 13.292l4.246-4.246q.14-.14.345-.15q.203-.01.363.15t.16.354t-.16.354l-4.389 4.388q-.13.131-.267.184q-.136.053-.298.053"/></svg>
-                  </button>
-
-                  <div class="overflow-hidden max-h-0 transition-[max-height] duration-500 ease-in-out flex flex-col w-full mt-1 text-[#f1f1f1] montserrat-light">
-                    <a href="https://sei.dost.gov.ph/transparency-seal" class="block px-4 py-2 hover:bg-[#A6E5FF]/10 text-xs">Transparency Seal</a>
-                    <a href="https://sei.dost.gov.ph/annual-report" class="block px-4 py-2 hover:bg-[#A6E5FF]/10 text-xs">Annual Report</a>
-                    <a href="https://sei.dost.gov.ph/citizens-charter" class="block px-4 py-2 hover:bg-[#A6E5FF]/10 text-xs">Citizen's Charter</a>
-                    <a href="https://sei.dost.gov.ph/procurement" class="block px-4 py-2 hover:bg-[#A6E5FF]/10 text-xs">Procurement</a>
-                    <a href="https://sei.dost.gov.ph/good-governance-conditions" class="block px-4 py-2 hover:bg-[#A6E5FF]/10 text-xs">Good Governance Conditions</a>
-                  </div>
-                </div>
-                <div class="w-full">
-                  <button class="dropdown-btn focus:text-[#A6E5FF] flex gap-2 w-full items-center text-left text-xs xl:text-sm text-white/80 hover:text-[#A6E5FF] transition-colors duration-300 montserrat-light cursor-pointer">
-                    Programs & Projects
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-auto group-hover:rotate-180 transition-all duration-300" viewBox="0 0 24 24"><!-- Icon from Material Symbols Light by Google - https://github.com/google/material-design-icons/blob/master/LICENSE --><path fill="currentColor" d="M12 14.379q-.161 0-.298-.053t-.267-.184L7.046 9.754q-.14-.14-.15-.344t.15-.364t.354-.16t.354.16L12 13.292l4.246-4.246q.14-.14.345-.15q.203-.01.363.15t.16.354t-.16.354l-4.389 4.388q-.13.131-.267.184q-.136.053-.298.053"/></svg>
-                  </button>
-                  <div class="overflow-hidden max-h-0 transition-[max-height] duration-500 ease-in-out flex flex-col w-full mt-1 text-[#f1f1f1] montserrat-light">
-                    <a href="https://science-scholarships.ph" target="_blank" class="block px-4 py-2 hover:bg-[#A6E5FF]/10 text-xs">Scholarship Programs</a>
-                    <a href="https://sei.dost.gov.ph/capacity-building" class="block px-4 py-2 hover:bg-[#A6E5FF]/10 text-xs">Capacity-Building</a>
-                    <a href="https://sei.dost.gov.ph/community-building" class="block px-4 py-2 hover:bg-[#A6E5FF]/10 text-xs">Community-Building</a>
-                    <a href="https://sei.dost.gov.ph/recognition" class="block px-4 py-2 hover:bg-[#A6E5FF]/10 text-xs">Recognition</a>
-                    <a href="https://sei.dost.gov.ph/learning-resources" class="block px-4 py-2 hover:bg-[#A6E5FF]/10 text-xs">Learning Resources</a>
-                  </div>
-                </div>
-                <div class="w-full">
-                  <button class="dropdown-btn focus:text-[#A6E5FF] flex gap-2 w-full items-center text-left text-xs xl:text-sm text-white/80 hover:text-[#A6E5FF] transition-colors duration-300 montserrat-light cursor-pointer">
-                    Resources
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-auto group-hover:rotate-180 transition-all duration-300" viewBox="0 0 24 24"><!-- Icon from Material Symbols Light by Google - https://github.com/google/material-design-icons/blob/master/LICENSE --><path fill="currentColor" d="M12 14.379q-.161 0-.298-.053t-.267-.184L7.046 9.754q-.14-.14-.15-.344t.15-.364t.354-.16t.354.16L12 13.292l4.246-4.246q.14-.14.345-.15q.203-.01.363.15t.16.354t-.16.354l-4.389 4.388q-.13.131-.267.184q-.136.053-.298.053"/></svg>
-                  </button>
-                  <div class="overflow-hidden max-h-0 transition-[max-height] duration-500 ease-in-out flex flex-col w-full mt-1 text-[#f1f1f1] montserrat-light">
-                    <a href="https://sei.dost.gov.ph/news-and-announcements" class="block px-4 py-2 hover:bg-[#A6E5FF]/10 text-xs">News & Announcements</a>
-                    <a href="https://sei.dost.gov.ph/downloads" class="block px-4 py-2 hover:bg-[#A6E5FF]/10 text-xs">Downloads</a>
-                    <a href="https://sei.dost.gov.ph/publications" class="block px-4 py-2 hover:bg-[#A6E5FF]/10 text-xs">Publications</a>
-                  </div>
-                </div>
-                <div class="w-full">
-                  <button class="dropdown-btn focus:text-[#A6E5FF] flex gap-2 w-full items-center text-left text-xs xl:text-sm text-white/80 hover:text-[#A6E5FF] transition-colors duration-300 montserrat-light cursor-pointer">
-                    Contact Us
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-auto group-hover:rotate-180 transition-all duration-300" viewBox="0 0 24 24"><!-- Icon from Material Symbols Light by Google - https://github.com/google/material-design-icons/blob/master/LICENSE --><path fill="currentColor" d="M12 14.379q-.161 0-.298-.053t-.267-.184L7.046 9.754q-.14-.14-.15-.344t.15-.364t.354-.16t.354.16L12 13.292l4.246-4.246q.14-.14.345-.15q.203-.01.363.15t.16.354t-.16.354l-4.389 4.388q-.13.131-.267.184q-.136.053-.298.053"/></svg>
-                  </button>
-                  <div class="overflow-hidden max-h-0 transition-[max-height] duration-500 ease-in-out flex flex-col w-full mt-1 text-[#f1f1f1] montserrat-light">
-                    <a href="https://sei.dost.gov.ph/regional-offices" class="block px-4 py-2 hover:bg-[#A6E5FF]/10 text-xs">Regional Offices</a>
-                    <a href="https://sei.dost.gov.ph/attached-agencies" class="block px-4 py-2 hover:bg-[#A6E5FF]/10 text-xs">Attached Agencies</a>
-                    <a href="https://helpdesk.sei.dost.gov.ph/" target="_blank" class="block px-4 py-2 hover:bg-[#A6E5FF]/10 text-xs">Helpdesk</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- SEI Header -->
-            <div id="sei-header" class="flex gap-6 md:gap-0 overflow-hidden max-h-[1000px]  transition-all duration-500">
-              <div class="flex flex-col md:flex-row items-center justify-between gap-6 py-4 border-t-1 border-[#f1f1f1]/50 w-full transition-all duration-300">
-                <!-- SEI Logo and Title -->
-                <a href="https://sei.dost.gov.ph/" class="cursor-pointer flex flex-row gap-3 shrink-0 items-center">
-                  <img src="logos/sei-logo-sei-v2.svg" alt="Science Education Institute Logo" class="h-10 sm:h-20 md:h-20 w-auto" loading="lazy"/>
-                  <div class="flex flex-col h-8 justify-center">
-                    <h2 class="flex text-[6px] sm:text-[8px] dost-text mt-1 montserrat-light">
-                      Republic of the Philippines
-                    </h2>
-                    <h2 class="flex text-[8px] sm:text-[10px] dost-text montserrat-light border-t-1 mt-1 uppercase">
-                      Department of Science and Technology
-                    </h2>
-                    <h2 class="flex text-[17px] sm:text-[20px] dost-text font-bold font-[Raleway] break-words -mt-1">
-                      Science Education Institute
-                    </h2>
-                  </div>
-                </a>
-                <!-- Logos -->
-                <div class="flex flex-col items-end space-y-1">
-                  <div class="flex flex-row items-center space-x-3">
-                    <img src="images/bagong-pilipinas.webp" alt="Bagong Pilipinas" class="h-20 w-auto" />
-                      <a href="#" target="_blank">
-                        <img src="images/transparency-seal.webp" alt="Official Seal" class="h-20 w-auto" />
-                      </a>
-                      <a href="https://www.foi.gov.ph/agencies/sei/" target="_blank">
-                        <img src="images/foi.webp" alt="FOI Logo" class="h-20 w-auto bg-white rounded-full" />
-                      </a>      
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-
-          <!-- Medium:PST -->
-          <div class="sm:hidden text-xs text-white text-center mt-2 montserrat-light pb-6">
-            Philippine Standard Time<br/>
-            <span id="philippine-time3">Loading time...</span>
-          </div>
-        </nav>
-    </header>
-      
-    <section id="annual-report" class="w-full lg:w-3/4 mx-auto font-montserrat-light flex flex-col lg:flex-row relative overflow-hidden mt-70 md:mt-50 lg:mt-55 xl:mt-48">
-      <div class="flex w-full">
-        <!-- Sidebar -->
-        <div
-        id="resizable-sidebar"
-        class="sidebar-scroll w-full lg:flex-grow flex flex-col bg-transparent backdrop-blur-md shadow-2xl z-10 px-0 md:px-20 lg:px-0">
-        
-          <!-- Page Title -->
-          <div class="flex items-center justify-center gap-3 mb-3 px-10 relative z-10">
-            <h1 class="text-transparent bg-clip-text bg-gradient-to-r from-[#F7CE68] via-[#57BAA6] to-[#125E85] text-4xl md:text-[47px] montserrat-extrabold text-center uppercase">
-              Annual <span class="raleway-medium">Report</span>
-            </h1>
-          </div>
-          <!-- Search Bar -->
-          <div is="sidebar-search-annual-report" class="mb-8 md:mb-10 relative group px-4 z-10">
-            <span class="absolute inset-y-0 left-9 flex items-center pointer-events-none">
-              <svg
-                class="w-3 h-3 text-white group-hover:text-[#1A6889] group-focus-within:text-[#1A6889] transition-colors duration-200"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                viewBox="0 0 24 24">
-                <circle cx="11" cy="11" r="8" />
-                <line x1="21" y1="21" x2="16.65" y2="16.65" />
+<body class="bg-[#030A17]">
+  <!-- Header Section -->
+  <header id="header">
+    <nav id="navbar"
+      class="w-full gap-4 fixed top-0 z-50 pointer-events-auto backdrop-blur-lg bg-[#030A17]/30 rounded-b-lg transition-all duration-300 ease-in-out text-white">
+      <div class="w-5/6 md:w-3/4 mx-auto">
+        <!-- Large:GOVPH Navigation Bar -->
+        <div class="hidden lg:flex flex-row items-center justify-center lg:justify-between py-3">
+          <div class="h-full flex flex-row items-center gap-8">
+            <!-- GOV PH Logo -->
+            <a href="https://www.gov.ph/"
+              class="cursor-pointer flex flex-row gap-3 shrink-0 items-center text-base xl:text-xl" target="_blank">
+              GOVPH
+            </a>
+            <!-- Home Button -->
+            <a href="/"
+              class="nav-link text-xs xl:text-sm text-white/80 hover:text-[#A6E5FF] relative transition-all duration-300 h-full flex items-center montserrat-light">
+              Home
+            </a>
+            <!-- About Button -->
+            <div
+              class="relative group text-xs xl:text-sm text-white/80 hover:text-[#A6E5FF] transition-all duration-300 h-full flex items-center montserrat-light cursor-pointer">
+              About DOST-SEI
+              <svg xmlns="http://www.w3.org/2000/svg"
+                class="w-5 h-auto group-hover:rotate-180 transition-all duration-300" viewBox="0 0 24 24">
+                <path fill="currentColor"
+                  d="M12 14.379q-.161 0-.298-.053t-.267-.184L7.046 9.754q-.14-.14-.15-.344t.15-.364t.354-.16t.354.16L12 13.292l4.246-4.246q.14-.14.345-.15q.203-.01.363.15t.16.354t-.16.354l-4.389 4.388q-.13.131-.267.184q-.136.053-.298.053" />
               </svg>
-            </span>
-            <input
-              type="text"
-              placeholder="Search…"
-              class="w-full pl-10 pr-4 py-2 rounded-xl bg-white/15 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-[#1A6889] transition"
-              id="sidebar-search-annual-report"
-            />
-          </div>
-          <!-- Sidebar Content -->
-          <nav id="sidebar-menu-annual-report" class="flex-1 px-4 md:px-4 pb-6 text-base md:text-lg relative z-10"></nav>
-        </div>
-
-        <!-- Main Content -->
-        <!-- <main class="flex-1 min-h-screen relative z-10 hidden lg:block">
-          <div id="main-content-annual-report" class="w-full max-w-full mx-auto min-h-[100vh] flex flex-col items-center justify-start"> -->
-             
-            <!-- Content will be injected here -->
-          <!-- </div>
-        </main> -->
-      </div>
-
-
-      <!-- Dashboard  -->
-      <template id="dashboard-content-annual-report">
-          <!-- Spiral Background Animation -->
-              <div class="spiral-container opacity-10 md:opacity-70 z-0">
-                  <div class="spiral-line"></div>
-                  <div class="spiral-line"></div>
-                  <div class="spiral-line"></div>
-                  <div class="spiral-line"></div>
-                  <div class="spiral-line"></div>
-                  <div class="spiral-line"></div>
-                  <div class="spiral-line"></div>
-                  <div class="spiral-line"></div>
+              <div
+                class="absolute left-1/2 top-full -translate-x-1/2 flex flex-col bg-[#030A17] w-[150%] border border-white/20 rounded-md text-[#f1f1f1] shadow-lg overflow-hidden opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-all duration-300">
+                <a href="/about" class="block px-4 py-2 hover:bg-[#A6E5FF]/10 text-xs">DOST-SEI</a>
+                <a href="https://apply.sei.dost.gov.ph/" target="_blank"
+                  class="block px-4 py-2 hover:bg-[#A6E5FF]/10 text-xs">Careers</a>
+                <a href="/data-privacy-policy" class="block px-4 py-2 hover:bg-[#A6E5FF]/10 text-xs">Data Privacy
+                  Policy</a>
+                <a href="/gad-space" class="block px-4 py-2 hover:bg-[#A6E5FF]/10 text-xs">GAD Space</a>
               </div>
-          <div class="w-full bg-transparent backdrop-blur-sm rounded-xl flex items-center justify-center text-center px-5 relative overflow-hidden mt-60">
-          
-              <!-- Dark blurred backdrop -->
-              <div class="absolute inset-0 opacity-10 flex items-center justify-center text-[20rem] font-black text-white/10 pointer-events-none select-none z-2">
-              SEI
-              </div>
-              <!-- Foreground text -->
-              <div class="relative z-10 mb-6">
-                  <h2 class="text-lg sm:text-2xl md:text-3xl font-bold text-white mb-2 drop-shadow-xl uppercase montserrat-extrabold">Discover over
-                      <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#F7CE68] via-[#57BAA6] to-[#125E85]">30 years </span> of SEI's milestones
-                  </h2>
-                  <p class="text-xs md:text-sm text-white/80 font-medium max-w-xl mx-auto">
-                      A legacy of transparency, progress, and service through our Annual Reports.
-                  </p>
-              </div>
-          </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 z-10 items-start justify-start">
-          <button onclick="navigateToSection('2000s')" class="cursor-pointer bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-4 text-left card-hover items-center justify-center mx-auto">
-            <div class="flex flex-row gap-2 text-white/80 text-md font-bold drop-shadow-xl">
-              <div class="rounded-lg bg-[#F1CD6C]/0 flex items-center justify-center text-transparent bg-clip-text bg-gradient-to-b from-[#F7CE68] via-[#57BAA6] to-[#125E85] font-bold text-2xl leading-[24px]">2000s
-              </div>
-              <div class="flex text-white/80 text-md uppercase font-bold drop-shadow-xl"> Report</div>
             </div>
-          </button>
-          <button onclick="navigateToSection('1900s')" class="cursor-pointer bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-4 text-left card-hover items-center justify-center mx-auto">
-            <div class="flex flex-row gap-2 text-white/80 text-md font-bold drop-shadow-xl">
-              <div class="rounded-lg bg-[#F1CD6C]/0 flex items-center justify-center text-transparent bg-clip-text bg-gradient-to-b from-[#F7CE68] via-[#57BAA6] to-[#125E85] font-bold text-2xl leading-[24px]">1900s
+            <!-- Transparency Button -->
+            <div
+              class="relative group text-xs xl:text-sm text-white/80 hover:text-[#A6E5FF] transition-all duration-300 h-full flex items-center montserrat-light cursor-pointer">
+              Transparency
+              <svg xmlns="http://www.w3.org/2000/svg"
+                class="w-5 h-auto group-hover:rotate-180 transition-all duration-300" viewBox="0 0 24 24">
+                <path fill="currentColor"
+                  d="M12 14.379q-.161 0-.298-.053t-.267-.184L7.046 9.754q-.14-.14-.15-.344t.15-.364t.354-.16t.354.16L12 13.292l4.246-4.246q.14-.14.345-.15q.203-.01.363.15t.16.354t-.16.354l-4.389 4.388q-.13.131-.267.184q-.136.053-.298.053" />
+              </svg>
+              <div
+                class="absolute left-1/2 top-full -translate-x-1/2 flex flex-col bg-[#030A17] w-[200%] border border-white/20 rounded-md text-[#f1f1f1] shadow-lg overflow-hidden opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-all duration-300">
+                <a href="/transparency-seal" class="block px-4 py-2 hover:bg-[#A6E5FF]/10 text-xs">Transparency Seal</a>
+                <a href="/annual-report" class="block px-4 py-2 hover:bg-[#A6E5FF]/10 text-xs">Annual Report</a>
+                <a href="/citizens-charter" class="block px-4 py-2 hover:bg-[#A6E5FF]/10 text-xs">Citizen's Charter</a>
+                <a href="/procurement" class="block px-4 py-2 hover:bg-[#A6E5FF]/10 text-xs">Procurement</a>
+                <a href="/good-governance-conditions" class="block px-4 py-2 hover:bg-[#A6E5FF]/10 text-xs">Good
+                  Governance Conditions</a>
               </div>
-              <div class="flex text-white/80 text-md uppercase font-bold drop-shadow-xl"> Report</div>
             </div>
-          </button>
+            <!-- Programs & Projects Button -->
+            <div
+              class="relative group text-xs xl:text-sm text-white/80 hover:text-[#A6E5FF] transition-all duration-300 h-full flex items-center montserrat-light cursor-pointer">
+              Programs & Projects
+              <svg xmlns="http://www.w3.org/2000/svg"
+                class="w-5 h-auto group-hover:rotate-180 transition-all duration-300" viewBox="0 0 24 24">
+                <path fill="currentColor"
+                  d="M12 14.379q-.161 0-.298-.053t-.267-.184L7.046 9.754q-.14-.14-.15-.344t.15-.364t.354-.16t.354.16L12 13.292l4.246-4.246q.14-.14.345-.15q.203-.01.363.15t.16.354t-.16.354l-4.389 4.388q-.13.131-.267.184q-.136.053-.298.053" />
+              </svg>
+              <div
+                class="absolute left-1/2 top-full -translate-x-1/2 flex flex-col bg-[#030A17] w-[150%] border border-white/20 rounded-md text-[#f1f1f1] shadow-lg overflow-hidden opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-all duration-300">
+                <a href="https://science-scholarships.ph/" target="_blank"
+                  class="block px-4 py-2 hover:bg-[#A6E5FF]/10 text-xs">Scholarship Programs</a>
+                <a href="/capacity-building" class="block px-4 py-2 hover:bg-[#A6E5FF]/10 text-xs">Capacity-Building</a>
+                <a href="/community-building"
+                  class="block px-4 py-2 hover:bg-[#A6E5FF]/10 text-xs">Community-Building</a>
+                <a href="/recognition" class="block px-4 py-2 hover:bg-[#A6E5FF]/10 text-xs">Recognition</a>
+                <a href="/learning-resources" class="block px-4 py-2 hover:bg-[#A6E5FF]/10 text-xs">Learning
+                  Resources</a>
+              </div>
+            </div>
+            <!-- Resources Button -->
+            <div
+              class="relative group text-xs xl:text-sm text-white/80 hover:text-[#A6E5FF] transition-all duration-300 h-full flex items-center montserrat-light cursor-pointer">
+              Resources
+              <svg xmlns="http://www.w3.org/2000/svg"
+                class="w-5 h-auto group-hover:rotate-180 transition-all duration-300" viewBox="0 0 24 24">
+                <path fill="currentColor"
+                  d="M12 14.379q-.161 0-.298-.053t-.267-.184L7.046 9.754q-.14-.14-.15-.344t.15-.364t.354-.16t.354.16L12 13.292l4.246-4.246q.14-.14.345-.15q.203-.01.363.15t.16.354t-.16.354l-4.389 4.388q-.13.131-.267.184q-.136.053-.298.053" />
+              </svg>
+              <div
+                class="absolute left-1/2 top-full -translate-x-1/2 flex flex-col bg-[#030A17] w-[200%] border border-white/20 rounded-md text-[#f1f1f1] shadow-lg overflow-hidden opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-all duration-300">
+                <a href="/sei-today" class="block px-4 py-2 hover:bg-[#A6E5FF]/10 text-xs">SEI Today</a>
+                <a href="/downloads" class="block px-4 py-2 hover:bg-[#A6E5FF]/10 text-xs">Downloads</a>
+                <a href="/publications" class="block px-4 py-2 hover:bg-[#A6E5FF]/10 text-xs">Publications</a>
+              </div>
+            </div>
+            <!-- Contact Us Button -->
+            <div
+              class="relative group text-xs xl:text-sm text-white/80 hover:text-[#A6E5FF] transition-all duration-300 h-full flex items-center montserrat-light cursor-pointer">
+              Contact Us
+              <svg xmlns="http://www.w3.org/2000/svg"
+                class="w-5 h-auto group-hover:rotate-180 transition-all duration-300" viewBox="0 0 24 24">
+                <path fill="currentColor"
+                  d="M12 14.379q-.161 0-.298-.053t-.267-.184L7.046 9.754q-.14-.14-.15-.344t.15-.364t.354-.16t.354.16L12 13.292l4.246-4.246q.14-.14.345-.15q.203-.01.363.15t.16.354t-.16.354l-4.389 4.388q-.13.131-.267.184q-.136.053-.298.053" />
+              </svg>
+              <div
+                class="absolute left-1/2 top-full -translate-x-1/2 flex flex-col bg-[#030A17] w-[200%] border border-white/20 rounded-md text-[#f1f1f1] shadow-lg overflow-hidden opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-all duration-300">
+                <a href="/regional-offices" class="block px-4 py-2 hover:bg-[#A6E5FF]/10 text-xs">Regional Offices</a>
+                <a href="/attached-agencies" class="block px-4 py-2 hover:bg-[#A6E5FF]/10 text-xs">Attached Agencies</a>
+                <a href="https://helpdesk.sei.dost.gov.ph/" target="_blank"
+                  class="block px-4 py-2 hover:bg-[#A6E5FF]/10 text-xs">Helpdesk</a>
+              </div>
+            </div>
+          </div>
+          <!-- PST -->
+          <div class="text-xs text-white text-right montserrat-light">
+            Philippine Standard Time<br />
+            <span id="philippine-time">Loading time...</span>
+          </div>
         </div>
 
-      </template>
-      
-    </section>
-      
-      <!-- Footer Section -->
-      <footer id="footer"><div class="w-full min-h-screen flex flex-col justify-between items-center relative pt-20 md:pt-30 lg:pt-60 overflow-hidden z-40">
-  <img class="absolute bottom-30 -left-30 w-1/2 h-auto object-cover opacity-50 z-0 mask-radial-at-left mask-radial-to-70%" src="images/footer/sei-img-footer-image-left.webp" alt="Boy Scholar" />
-  <img class="absolute -bottom-10 -right-10 w-1/2 h-auto object-cover opacity-50 z-0 mask-radial-at-right mask-radial-to-60%" src="images/footer/sei-img-footer-image-right.webp" alt="Girl Scholar" />
-  <!-- CTA -->
-  <div class="w-[90%] md:w-[85%] lg:w-[75%] flex flex-col justify-center items-center z-50">
-    <h1 class=" text-white text-xl sm:text-3xl md:text-5xl lg:text-6xl font-bold z-1 text-center uppercase raleway-medium fadeIntersect">
-      Let's build this nation <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#F7CE68] via-[#57BAA6] to-[#125E85] text-5xl sm:text-7xl md:text-9xl montserrat-extrabold">together</span> 
-    </h1>
-                       
-    <div id="scrambleContainer" class="flex flex-row justify-center items-center z-1 mt-10 gap-4 fadeIntersect">
-      <h2 class="text-[10px] md:text-lg raleway-light tracking-wide text-[#f1f1f1] uppercase text-center">
-        Data-Driven
-      </h2>
-      <h2 class="text-[10px] md:text-lg raleway-light tracking-wide text-[#f1f1f1] uppercase text-center">
-        •
-      </h2>
-      <h2 class="text-[10px] md:text-lg raleway-light tracking-wide text-[#f1f1f1] uppercase text-center">
-        Laser-Focused
-      </h2>
-      <h2 class="text-[10px] md:text-lg raleway-light tracking-wide text-[#f1f1f1] uppercase text-center">
-        •
-      </h2>
-      <h2 class="text-[10px] md:text-lg raleway-light tracking-wide text-[#f1f1f1] uppercase text-center">
-        People-Centered
-      </h2>
-    </div>
-  </div>
 
-  <!-- Republic of the Philippines Footer -->
-  <div class="relative mt-20 h-auto bg-[#0c0c0F] rounded-t-full md:bg-transparent w-full overflow-x-clip flex flex-col justify-center items-center z-50 ">
-    <div class="w-[105vw] h-[300px] md:h-[350px] rounded-t-[100%] absolute top-0 lg:-top-15 right-1/2 translate-x-1/2 z-0 bg-[#0c0c0F] flex flex-col items-center justify-end">
-    </div>
-    <!-- SEAL -->
-    <div class="w-[90%] md:w-[85%] lg:w-[75%] flex flex-col md:flex-row justify-center md:justify-between items-start rounded-xl py-8 gap-8 z-50 text-sm text-[#f1f1f1] mx-auto">
-      <!-- Left: Seal and Text -->
-      <div class="flex items-center md:items-start gap-4 w-full flex-col md:flex-row md:w-1/3">
-        <img src="images/footer/sei-img-footer-govph-seal.webp" alt="PH Seal" class="w-40 opacity-20 block" />
-        <div class="flex flex-col items-center md:items-start">
-          <p class="font-semibold uppercase text-[14px]">Republic of the Philippines</p>
-          <p class="text-[12px]">All content is in the public domain unless otherwise stated.</p>
+        <!-- Medium:GOVPH Navigation Bar -->
+        <div class="lg:hidden flex flex-col items-center justify-between border-b-1 border-[#f1f1f1]/50 py-3">
+          <div class="h-full w-full flex flex-row items-center justify-between gap-6">
+            <a href="https://www.gov.ph/"
+              class="cursor-pointer flex flex-row gap-3 shrink-0 items-center text-base xl:text-xl" target="_blank">
+              GOVPH
+            </a>
+
+            <!-- PST -->
+            <div class="hidden sm:flex flex-col text-xs text-white text-center mt-2 montserrat-light">
+              Philippine Standard Time<br />
+              <span id="philippine-time2">Loading time...</span>
+            </div>
+
+            <!-- Visible when small -->
+            <div class="flex items-center justify-between gap-6">
+              <button id="navbarToggle"
+                class="text-white focus:outline-none hover:text-[#A6E5FF] transition-colors duration-300 cursor-pointer focus:text-[#A6E5FF]">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-auto" viewBox="0 0 21 21">
+                  <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                    d="M4.5 6.5h12m-12.002 4h11.997M4.5 14.5h11.995" />
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Small: Navigation Bar -->
+          <div
+            class="max-h-0 overflow-hidden flex flex-col w-full items-left justify-between gap-6 transition-all duration-300"
+            id="mobileNavbar">
+            <a href="/"
+              class="nav-link text-xs xl:text-sm text-white/80 hover:text-[#A6E5FF] relative transition-all duration-300 h-full flex items-center montserrat-light">
+              Home
+            </a>
+            <div class="w-full">
+              <button
+                class="dropdown-btn focus:text-[#A6E5FF] flex gap-2 w-full items-center text-left text-xs xl:text-sm text-white/80 hover:text-[#A6E5FF] transition-colors duration-300 montserrat-light cursor-pointer">
+                About DOST-SEI
+                <svg xmlns="http://www.w3.org/2000/svg"
+                  class="w-5 h-auto group-hover:rotate-180 transition-all duration-300"
+                  viewBox="0 0 24 24"><!-- Icon from Material Symbols Light by Google - https://github.com/google/material-design-icons/blob/master/LICENSE -->
+                  <path fill="currentColor"
+                    d="M12 14.379q-.161 0-.298-.053t-.267-.184L7.046 9.754q-.14-.14-.15-.344t.15-.364t.354-.16t.354.16L12 13.292l4.246-4.246q.14-.14.345-.15q.203-.01.363.15t.16.354t-.16.354l-4.389 4.388q-.13.131-.267.184q-.136.053-.298.053" />
+                </svg>
+              </button>
+
+              <div
+                class="overflow-hidden max-h-0 transition-[max-height] duration-500 ease-in-out flex flex-col w-full mt-1 text-[#f1f1f1] montserrat-light">
+                <a href="https://sei.dost.gov.ph/about"
+                  class="block px-4 py-2 hover:bg-[#A6E5FF]/10 text-xs">DOST-SEI</a>
+                <a href="https://apply.sei.dost.gov.ph" target="_blank"
+                  class="block px-4 py-2 hover:bg-[#A6E5FF]/10 text-xs">Careers</a>
+                <a href="https://sei.dost.gov.ph/data-privacy-policy"
+                  class="block px-4 py-2 hover:bg-[#A6E5FF]/10 text-xs">Data Privacy Policy</a>
+                <a href="https://sei.dost.gov.ph/gad-space" class="block px-4 py-2 hover:bg-[#A6E5FF]/10 text-xs">GAD
+                  Space</a>
+              </div>
+            </div>
+            <div class="w-full">
+              <button
+                class="dropdown-btn focus:text-[#A6E5FF] flex gap-2 w-full items-center text-left text-xs xl:text-sm text-white/80 hover:text-[#A6E5FF] transition-colors duration-300 montserrat-light cursor-pointer">
+                Transparency
+                <svg xmlns="http://www.w3.org/2000/svg"
+                  class="w-5 h-auto group-hover:rotate-180 transition-all duration-300"
+                  viewBox="0 0 24 24"><!-- Icon from Material Symbols Light by Google - https://github.com/google/material-design-icons/blob/master/LICENSE -->
+                  <path fill="currentColor"
+                    d="M12 14.379q-.161 0-.298-.053t-.267-.184L7.046 9.754q-.14-.14-.15-.344t.15-.364t.354-.16t.354.16L12 13.292l4.246-4.246q.14-.14.345-.15q.203-.01.363.15t.16.354t-.16.354l-4.389 4.388q-.13.131-.267.184q-.136.053-.298.053" />
+                </svg>
+              </button>
+
+              <div
+                class="overflow-hidden max-h-0 transition-[max-height] duration-500 ease-in-out flex flex-col w-full mt-1 text-[#f1f1f1] montserrat-light">
+                <a href="https://sei.dost.gov.ph/transparency-seal"
+                  class="block px-4 py-2 hover:bg-[#A6E5FF]/10 text-xs">Transparency Seal</a>
+                <a href="https://sei.dost.gov.ph/annual-report"
+                  class="block px-4 py-2 hover:bg-[#A6E5FF]/10 text-xs">Annual Report</a>
+                <a href="https://sei.dost.gov.ph/citizens-charter"
+                  class="block px-4 py-2 hover:bg-[#A6E5FF]/10 text-xs">Citizen's Charter</a>
+                <a href="https://sei.dost.gov.ph/procurement"
+                  class="block px-4 py-2 hover:bg-[#A6E5FF]/10 text-xs">Procurement</a>
+                <a href="https://sei.dost.gov.ph/good-governance-conditions"
+                  class="block px-4 py-2 hover:bg-[#A6E5FF]/10 text-xs">Good Governance Conditions</a>
+              </div>
+            </div>
+            <div class="w-full">
+              <button
+                class="dropdown-btn focus:text-[#A6E5FF] flex gap-2 w-full items-center text-left text-xs xl:text-sm text-white/80 hover:text-[#A6E5FF] transition-colors duration-300 montserrat-light cursor-pointer">
+                Programs & Projects
+                <svg xmlns="http://www.w3.org/2000/svg"
+                  class="w-5 h-auto group-hover:rotate-180 transition-all duration-300"
+                  viewBox="0 0 24 24"><!-- Icon from Material Symbols Light by Google - https://github.com/google/material-design-icons/blob/master/LICENSE -->
+                  <path fill="currentColor"
+                    d="M12 14.379q-.161 0-.298-.053t-.267-.184L7.046 9.754q-.14-.14-.15-.344t.15-.364t.354-.16t.354.16L12 13.292l4.246-4.246q.14-.14.345-.15q.203-.01.363.15t.16.354t-.16.354l-4.389 4.388q-.13.131-.267.184q-.136.053-.298.053" />
+                </svg>
+              </button>
+              <div
+                class="overflow-hidden max-h-0 transition-[max-height] duration-500 ease-in-out flex flex-col w-full mt-1 text-[#f1f1f1] montserrat-light">
+                <a href="https://science-scholarships.ph" target="_blank"
+                  class="block px-4 py-2 hover:bg-[#A6E5FF]/10 text-xs">Scholarship Programs</a>
+                <a href="https://sei.dost.gov.ph/capacity-building"
+                  class="block px-4 py-2 hover:bg-[#A6E5FF]/10 text-xs">Capacity-Building</a>
+                <a href="https://sei.dost.gov.ph/community-building"
+                  class="block px-4 py-2 hover:bg-[#A6E5FF]/10 text-xs">Community-Building</a>
+                <a href="https://sei.dost.gov.ph/recognition"
+                  class="block px-4 py-2 hover:bg-[#A6E5FF]/10 text-xs">Recognition</a>
+                <a href="https://sei.dost.gov.ph/learning-resources"
+                  class="block px-4 py-2 hover:bg-[#A6E5FF]/10 text-xs">Learning Resources</a>
+              </div>
+            </div>
+            <div class="w-full">
+              <button
+                class="dropdown-btn focus:text-[#A6E5FF] flex gap-2 w-full items-center text-left text-xs xl:text-sm text-white/80 hover:text-[#A6E5FF] transition-colors duration-300 montserrat-light cursor-pointer">
+                Resources
+                <svg xmlns="http://www.w3.org/2000/svg"
+                  class="w-5 h-auto group-hover:rotate-180 transition-all duration-300"
+                  viewBox="0 0 24 24"><!-- Icon from Material Symbols Light by Google - https://github.com/google/material-design-icons/blob/master/LICENSE -->
+                  <path fill="currentColor"
+                    d="M12 14.379q-.161 0-.298-.053t-.267-.184L7.046 9.754q-.14-.14-.15-.344t.15-.364t.354-.16t.354.16L12 13.292l4.246-4.246q.14-.14.345-.15q.203-.01.363.15t.16.354t-.16.354l-4.389 4.388q-.13.131-.267.184q-.136.053-.298.053" />
+                </svg>
+              </button>
+              <div
+                class="overflow-hidden max-h-0 transition-[max-height] duration-500 ease-in-out flex flex-col w-full mt-1 text-[#f1f1f1] montserrat-light">
+                <a href="https://sei.dost.gov.ph/news-and-announcements"
+                  class="block px-4 py-2 hover:bg-[#A6E5FF]/10 text-xs">News & Announcements</a>
+                <a href="https://sei.dost.gov.ph/downloads"
+                  class="block px-4 py-2 hover:bg-[#A6E5FF]/10 text-xs">Downloads</a>
+                <a href="https://sei.dost.gov.ph/publications"
+                  class="block px-4 py-2 hover:bg-[#A6E5FF]/10 text-xs">Publications</a>
+              </div>
+            </div>
+            <div class="w-full">
+              <button
+                class="dropdown-btn focus:text-[#A6E5FF] flex gap-2 w-full items-center text-left text-xs xl:text-sm text-white/80 hover:text-[#A6E5FF] transition-colors duration-300 montserrat-light cursor-pointer">
+                Contact Us
+                <svg xmlns="http://www.w3.org/2000/svg"
+                  class="w-5 h-auto group-hover:rotate-180 transition-all duration-300"
+                  viewBox="0 0 24 24"><!-- Icon from Material Symbols Light by Google - https://github.com/google/material-design-icons/blob/master/LICENSE -->
+                  <path fill="currentColor"
+                    d="M12 14.379q-.161 0-.298-.053t-.267-.184L7.046 9.754q-.14-.14-.15-.344t.15-.364t.354-.16t.354.16L12 13.292l4.246-4.246q.14-.14.345-.15q.203-.01.363.15t.16.354t-.16.354l-4.389 4.388q-.13.131-.267.184q-.136.053-.298.053" />
+                </svg>
+              </button>
+              <div
+                class="overflow-hidden max-h-0 transition-[max-height] duration-500 ease-in-out flex flex-col w-full mt-1 text-[#f1f1f1] montserrat-light">
+                <a href="https://sei.dost.gov.ph/regional-offices"
+                  class="block px-4 py-2 hover:bg-[#A6E5FF]/10 text-xs">Regional Offices</a>
+                <a href="https://sei.dost.gov.ph/attached-agencies"
+                  class="block px-4 py-2 hover:bg-[#A6E5FF]/10 text-xs">Attached Agencies</a>
+                <a href="https://helpdesk.sei.dost.gov.ph/" target="_blank"
+                  class="block px-4 py-2 hover:bg-[#A6E5FF]/10 text-xs">Helpdesk</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SEI Header -->
+        <div id="sei-header" class="flex gap-6 md:gap-0 overflow-hidden max-h-[1000px]  transition-all duration-500">
+          <div
+            class="flex flex-col md:flex-row items-center justify-between gap-6 py-4 border-t-1 border-[#f1f1f1]/50 w-full transition-all duration-300">
+            <!-- SEI Logo and Title -->
+            <a href="https://sei.dost.gov.ph/" class="cursor-pointer flex flex-row gap-3 shrink-0 items-center">
+              <img src="logos/sei-logo-sei-v2.svg" alt="Science Education Institute Logo"
+                class="h-10 sm:h-20 md:h-20 w-auto" loading="lazy" />
+              <div class="flex flex-col h-8 justify-center">
+                <h2 class="flex text-[6px] sm:text-[8px] dost-text mt-1 montserrat-light">
+                  Republic of the Philippines
+                </h2>
+                <h2 class="flex text-[8px] sm:text-[10px] dost-text montserrat-light border-t-1 mt-1 uppercase">
+                  Department of Science and Technology
+                </h2>
+                <h2 class="flex text-[17px] sm:text-[20px] dost-text font-bold font-[Raleway] break-words -mt-1">
+                  Science Education Institute
+                </h2>
+              </div>
+            </a>
+            <!-- Logos -->
+            <div class="flex flex-col items-end space-y-1">
+              <div class="flex flex-row items-center space-x-3">
+                <img src="images/bagong-pilipinas.webp" alt="Bagong Pilipinas" class="h-20 w-auto" />
+                <a href="#" target="_blank">
+                  <img src="images/transparency-seal.webp" alt="Official Seal" class="h-20 w-auto" />
+                </a>
+                <a href="https://www.foi.gov.ph/agencies/sei/" target="_blank">
+                  <img src="images/foi.webp" alt="FOI Logo" class="h-20 w-auto bg-white rounded-full" />
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
-      <!-- Center: About GOVPH -->
-      <div class="w-full md:w-1/4">
-        <p class="font-semibold uppercase text-[14px]">About GOVPH</p>
-        <p class="mb-1 text-[12px]">Learn more about the Philippine government, its structure, how government works and the people behind it.</p>
-        <ul class="space-y-1 text-[12px] mt-5">
-          <li><a href="http://www.gov.ph/" target="_blank" class="hover:underline">GOV.PH</a></li>
-          <li><a href="http://www.gov.ph/data" target="_blank" class="hover:underline">Open Data Portal</a></li>
-          <li><a href="http://www.officialgazette.gov.ph/" target="_blank" class="hover:underline">Official Gazette</a></li>
-        </ul>
+
+      <!-- Medium:PST -->
+      <div class="sm:hidden text-xs text-white text-center mt-2 montserrat-light pb-6">
+        Philippine Standard Time<br />
+        <span id="philippine-time3">Loading time...</span>
+      </div>
+    </nav>
+  </header>
+
+  <section id="annual-report"
+    class="w-full lg:w-3/4 mx-auto min-h-screen font-montserrat-light flex flex-col lg:flex-row relative mt-75 md:mt-50 lg:mt-55">
+    <div class="flex w-full">
+      <!-- Sidebar -->
+      <aside id="sidebar-scroll" class="w-full lg:w-[35%] xl:w-[30%] min-w-[100px]  h-screen sticky top-0 flex flex-col bg-transparent backdrop-blur-md shadow-2xl z-10 overflow-y-auto overflow-hidden px-0 md:px-20 lg:px-0">
+
+        <!-- Page Title -->
+        <div class="flex items-center justify-center gap-3 mb-3 px-10 relative z-10">
+          <h1
+            class="text-transparent bg-clip-text bg-gradient-to-r from-[#F7CE68] via-[#57BAA6] to-[#125E85] text-4xl md:text-[47px] montserrat-extrabold text-center uppercase">
+            Annual <span class="raleway-medium">Report</span>
+          </h1>
+        </div>
+        <!-- Search Bar -->
+        <div id="sidebar-search-annual-report" class="mb-8 md:mb-10 relative group px-4 z-10">
+          <span class="absolute inset-y-0 left-9 flex items-center pointer-events-none">
+            <svg
+              class="w-3 h-3 text-white group-hover:text-[#1A6889] group-focus-within:text-[#1A6889] transition-colors duration-200"
+              fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <circle cx="11" cy="11" r="8" />
+              <line x1="21" y1="21" x2="16.65" y2="16.65" />
+            </svg>
+          </span>
+          <input type="text" placeholder="Search…"
+            class="w-full pl-10 pr-4 py-2 rounded-xl bg-white/15 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-[#1A6889] transition"
+            id="sidebar-search-annual-report" />
+        </div>
+        <!-- Sidebar Content -->
+        <nav id="sidebar-menu-annual-report" class="flex-1 px-4 md:px-4 pb-6 text-sm md:text-lg relative z-10"></nav>
+      </aside>
+      <!-- Divider -->
+      <div id="divider" class="w-[2px] bg-white/10 hover:bg-white/30 cursor-col-resize transition-colors z-20"></div>
+      <!-- Main Content -->
+      <main class="flex-1 min-h-screen relative z-10 hidden lg:block">
+        <div id="main-content-annual-report"
+          class="w-full max-w-full mx-auto min-h-[100vh] flex flex-col items-center justify-start">
+
+          <!-- Content will be injected here -->
+        </div>
+      </main>
+    </div>
+
+
+    <!-- Dashboard  -->
+    <template id="dashboard-content-annual-report">
+      <!-- Spiral Background Animation -->
+      <div class="spiral-container opacity-10 md:opacity-70 z-0">
+        <div class="spiral-line"></div>
+        <div class="spiral-line"></div>
+        <div class="spiral-line"></div>
+        <div class="spiral-line"></div>
+        <div class="spiral-line"></div>
+        <div class="spiral-line"></div>
+        <div class="spiral-line"></div>
+        <div class="spiral-line"></div>
+      </div>
+      <div
+        class="w-full bg-transparent backdrop-blur-sm rounded-xl flex items-center justify-center text-center px-5 relative overflow-hidden mt-60">
+
+        <!-- Dark blurred backdrop -->
+        <div
+          class="absolute inset-0 opacity-10 flex items-center justify-center text-[20rem] font-black text-white/10 pointer-events-none select-none z-2">
+          SEI
+        </div>
+        <!-- Foreground text -->
+        <div class="relative z-10 mb-6">
+          <h2
+            class="text-lg sm:text-2xl md:text-3xl font-bold text-white mb-2 drop-shadow-xl uppercase montserrat-extrabold">
+            Discover over
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#F7CE68] via-[#57BAA6] to-[#125E85]">30
+              years </span> of SEI's milestones
+          </h2>
+          <p class="text-xs md:text-sm text-white/80 font-medium max-w-xl mx-auto">
+            A legacy of transparency, progress, and service through our Annual Reports.
+          </p>
+        </div>
       </div>
 
-      <!-- Right: Government Links -->
-      <div class="w-full md:w-1/3 flex flex-col items-start md:items-center">
-        <ul class="space-y-1 text-[12px] w-max">
-          <p class="font-semibold uppercase text-[14px]">Government Links</p>
-          <li><a href="http://op-proper.gov.ph" target="_blank" class="hover:underline">Office of the President</a></li>
-          <li><a href="http://www.ovp.gov.ph" target="_blank" class="hover:underline">Office of the Vice President</a></li>
-          <li><a href="http://web.senate.gov.ph" target="_blank" class="hover:underline">Senate of the Philippines</a></li>
-          <li><a href="http://www.congress.gov.ph" target="_blank" class="hover:underline">House of Representatives</a></li>
-          <li><a href="http://sc.judiciary.gov.ph" target="_blank" class="hover:underline">Supreme Court</a></li>
-          <li><a href="http://ca.judiciary.gov.ph" target="_blank" class="hover:underline">Court of Appeals</a></li>
-          <li><a href="http://sb.judiciary.gov.ph" target="_blank" class="hover:underline">Sandiganbayan</a></li>
-        </ul>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 z-10 items-start justify-start">
+        <button onclick="navigateToSection('2000s')"
+          class="cursor-pointer bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-4 text-left card-hover items-center justify-center mx-auto">
+          <div class="flex flex-row gap-2 text-white/80 text-md font-bold drop-shadow-xl">
+            <div
+              class="rounded-lg bg-[#F1CD6C]/0 flex items-center justify-center text-transparent bg-clip-text bg-gradient-to-b from-[#F7CE68] via-[#57BAA6] to-[#125E85] font-bold text-2xl leading-[24px]">
+              2000s
+            </div>
+            <div class="flex text-white/80 text-md uppercase font-bold drop-shadow-xl"> Report</div>
+          </div>
+        </button>
+        <button onclick="navigateToSection('1900s')"
+          class="cursor-pointer bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-4 text-left card-hover items-center justify-center mx-auto">
+          <div class="flex flex-row gap-2 text-white/80 text-md font-bold drop-shadow-xl">
+            <div
+              class="rounded-lg bg-[#F1CD6C]/0 flex items-center justify-center text-transparent bg-clip-text bg-gradient-to-b from-[#F7CE68] via-[#57BAA6] to-[#125E85] font-bold text-2xl leading-[24px]">
+              1900s
+            </div>
+            <div class="flex text-white/80 text-md uppercase font-bold drop-shadow-xl"> Report</div>
+          </div>
+        </button>
       </div>
-    </div>    
-         
-  </div>
+
+    </template>
+
+  </section>
+
+  <!-- Footer Section -->
+  <footer id="footer">
+    <div
+      class="w-full min-h-screen flex flex-col justify-between items-center relative pt-20 md:pt-30 lg:pt-60 overflow-hidden z-40">
+      <img
+        class="absolute bottom-30 -left-30 w-1/2 h-auto object-cover opacity-50 z-0 mask-radial-at-left mask-radial-to-70%"
+        src="images/footer/sei-img-footer-image-left.webp" alt="Boy Scholar" />
+      <img
+        class="absolute -bottom-10 -right-10 w-1/2 h-auto object-cover opacity-50 z-0 mask-radial-at-right mask-radial-to-60%"
+        src="images/footer/sei-img-footer-image-right.webp" alt="Girl Scholar" />
+      <!-- CTA -->
+      <div class="w-[90%] md:w-[85%] lg:w-[75%] flex flex-col justify-center items-center z-50">
+        <h1
+          class=" text-white text-xl sm:text-3xl md:text-5xl lg:text-6xl font-bold z-1 text-center uppercase raleway-medium fadeIntersect">
+          Let's build this nation <span
+            class="text-transparent bg-clip-text bg-gradient-to-r from-[#F7CE68] via-[#57BAA6] to-[#125E85] text-5xl sm:text-7xl md:text-9xl montserrat-extrabold">together</span>
+        </h1>
+
+        <div id="scrambleContainer" class="flex flex-row justify-center items-center z-1 mt-10 gap-4 fadeIntersect">
+          <h2 class="text-[10px] md:text-lg raleway-light tracking-wide text-[#f1f1f1] uppercase text-center">
+            Data-Driven
+          </h2>
+          <h2 class="text-[10px] md:text-lg raleway-light tracking-wide text-[#f1f1f1] uppercase text-center">
+            •
+          </h2>
+          <h2 class="text-[10px] md:text-lg raleway-light tracking-wide text-[#f1f1f1] uppercase text-center">
+            Laser-Focused
+          </h2>
+          <h2 class="text-[10px] md:text-lg raleway-light tracking-wide text-[#f1f1f1] uppercase text-center">
+            •
+          </h2>
+          <h2 class="text-[10px] md:text-lg raleway-light tracking-wide text-[#f1f1f1] uppercase text-center">
+            People-Centered
+          </h2>
+        </div>
+      </div>
+
+      <!-- Republic of the Philippines Footer -->
+      <div
+        class="relative mt-20 h-auto bg-[#0c0c0F] rounded-t-full md:bg-transparent w-full overflow-x-clip flex flex-col justify-center items-center z-50 ">
+        <div
+          class="w-[105vw] h-[300px] md:h-[350px] rounded-t-[100%] absolute top-0 lg:-top-15 right-1/2 translate-x-1/2 z-0 bg-[#0c0c0F] flex flex-col items-center justify-end">
+        </div>
+        <!-- SEAL -->
+        <div
+          class="w-[90%] md:w-[85%] lg:w-[75%] flex flex-col md:flex-row justify-center md:justify-between items-start rounded-xl py-8 gap-8 z-50 text-sm text-[#f1f1f1] mx-auto">
+          <!-- Left: Seal and Text -->
+          <div class="flex items-center md:items-start gap-4 w-full flex-col md:flex-row md:w-1/3">
+            <img src="images/footer/sei-img-footer-govph-seal.webp" alt="PH Seal" class="w-40 opacity-20 block" />
+            <div class="flex flex-col items-center md:items-start">
+              <p class="font-semibold uppercase text-[14px]">Republic of the Philippines</p>
+              <p class="text-[12px]">All content is in the public domain unless otherwise stated.</p>
+            </div>
+          </div>
+
+          <!-- Center: About GOVPH -->
+          <div class="w-full md:w-1/4">
+            <p class="font-semibold uppercase text-[14px]">About GOVPH</p>
+            <p class="mb-1 text-[12px]">Learn more about the Philippine government, its structure, how government works
+              and the people behind it.</p>
+            <ul class="space-y-1 text-[12px] mt-5">
+              <li><a href="http://www.gov.ph/" target="_blank" class="hover:underline">GOV.PH</a></li>
+              <li><a href="http://www.gov.ph/data" target="_blank" class="hover:underline">Open Data Portal</a></li>
+              <li><a href="http://www.officialgazette.gov.ph/" target="_blank" class="hover:underline">Official
+                  Gazette</a></li>
+            </ul>
+          </div>
+
+          <!-- Right: Government Links -->
+          <div class="w-full md:w-1/3 flex flex-col items-start md:items-center">
+            <ul class="space-y-1 text-[12px] w-max">
+              <p class="font-semibold uppercase text-[14px]">Government Links</p>
+              <li><a href="http://op-proper.gov.ph" target="_blank" class="hover:underline">Office of the President</a>
+              </li>
+              <li><a href="http://www.ovp.gov.ph" target="_blank" class="hover:underline">Office of the Vice
+                  President</a></li>
+              <li><a href="http://web.senate.gov.ph" target="_blank" class="hover:underline">Senate of the
+                  Philippines</a></li>
+              <li><a href="http://www.congress.gov.ph" target="_blank" class="hover:underline">House of
+                  Representatives</a></li>
+              <li><a href="http://sc.judiciary.gov.ph" target="_blank" class="hover:underline">Supreme Court</a></li>
+              <li><a href="http://ca.judiciary.gov.ph" target="_blank" class="hover:underline">Court of Appeals</a></li>
+              <li><a href="http://sb.judiciary.gov.ph" target="_blank" class="hover:underline">Sandiganbayan</a></li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
 
 
-  <svg width="2500" height="2500" viewBox="0 0 2500 2500" class="absolute -top-80 -right-75  pointer-events-none z-10" xmlns="http://www.w3.org/2000/svg">
-    <defs>
-      <radialGradient id="radialCircle" cx="50%" cy="50%" r="50%">
-        <stop offset="0%" stop-color="#3D5D94" />
-        <stop offset="100%" stop-color="transparent" />
-      </radialGradient>
-    </defs>
-    <rect width="2500" height="2500" fill="url(#radialCircle)" />
-  </svg>
-</div>
-</footer>
+      <svg width="2500" height="2500" viewBox="0 0 2500 2500"
+        class="absolute -top-80 -right-75  pointer-events-none z-10" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <radialGradient id="radialCircle" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#3D5D94" />
+            <stop offset="100%" stop-color="transparent" />
+          </radialGradient>
+        </defs>
+        <rect width="2500" height="2500" fill="url(#radialCircle)" />
+      </svg>
+    </div>
+  </footer>
 
-    <script src="script.js"></script>
-  </body>
+  <script src="script.js"></script>
+</body>
+
 </html>

@@ -59,6 +59,45 @@ html {
   font-style: italic;
 }
 
+/* Timeline Styles - Star inside button */
+.timeline-star {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
+}
+
+.star-active {
+  animation: pulse 1s infinite;
+}
+
+.star-inactive {
+  opacity: 0.7;
+  transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+.timeline-open {
+  display: block;
+}
+
+/* Enhanced hover effects for the entire button including star */
+.timeline-open button:hover .timeline-star {
+  transform: scale(1.1);
+}
+
+.timeline-open button:hover .star-inactive {
+  opacity: 1;
+}
 
 /* Base dropdown styling */
 .dropdown-content {
@@ -101,6 +140,20 @@ html {
 }
 
 
+/* Sidebar styles */
+#sidebar-scroll::-webkit-scrollbar {
+  width: 4px;                /* Thickness of scrollbar */
+}
+
+.sidebar-scroll::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #1A6889 30%, #57BAA6 100%); /* Gradient thumb */
+  border-radius: 4px;        /* Rounded corners for thumb */
+}
+
+.sidebar-scroll::-webkit-scrollbar-track {
+  background: transparent;    /* Transparent track */
+}
+
 
 #sidebar-menu button:hover,
 #sidebar-menu a:hover {
@@ -115,3 +168,50 @@ html {
 }
 
 
+#mobile-template-popup {
+  align-items: center;
+  justify-content: center;
+}
+
+#mobile-template-popup .popup-inner,
+#mobile-template-popup > div {
+  max-height: 90vh;      /* Limit popup height to 90% of viewport */
+  overflow-y: auto;      /* Make content scrollable if needed */
+  min-height: 0;
+}
+
+button:focus {
+  outline: 0.1px solid #465358;
+
+}
+
+#pdf-container-annual-report-seal {
+  max-height: 130vh;
+  max-width: 60vw;      
+  overflow-y: auto;     
+}
+
+#pdf-container-annual-report-seal canvas {
+  display: block;
+  width: 100% !important;   
+  height: auto !important;  
+  margin: 0 auto 2rem auto;  
+  background: rgba(255, 255, 255, 0);         
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06); 
+  border-radius: 6px;   
+}
+
+#pdf-container-annual-report-seal::-webkit-scrollbar {
+  width: 8px;
+}
+#pdf-container-annual-report-seal::-webkit-scrollbar-thumb {
+  background: #F1CD6C;
+  border-radius: 8px;
+}
+#pdf-container-annual-report-seal::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #57BAA6, #F1CD6C);
+}
+#pdf-container-annual-report-seal::-webkit-scrollbar-track {
+  background: #181d2600;
+  border-radius: 8px;
+}
